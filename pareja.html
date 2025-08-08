@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>CCT</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+</head>
+<body>
+
+<!--BARRA DE ARRIBA-->
+<div class="barra-superior">
+  <div class="nombre-tienda">CCT</div>
+
+  <div class="frases">
+    <b><span>LA MEJOR TIENDA DEL MUNDO,</span>
+    <span>COMPRA Y RECOGE FÁCIL</span></b>
+  </div>
+
+  <div class="busqueda-categorias">
+    <input type="text" placeholder="Buscar productos...">
+    <button class="lupa">🔍</button>
+    <button class="btn-categorias" onclick="toggleMenu()">≡</button>
+
+<div id="menu-secciones" class="menu-secciones">
+    <a href="alimentos.html">Alimentos</a>
+    <a href="limpieza.html">Productos de limpieza</a>
+    <a href="hogar.html">Productos para el hogar</a>
+    <a href="libros.html">Libros</a>
+    <a href="electrodomesticos.html">Electrodomesticos</a>
+    <a href="pareja.html">Para la pareja</a>
+    </div>
+</div>
+</div>
+
+
+<!--CONTENIDO YA-->
+<div class="contenidoNOMBRES">
+  <h1> Sección de pareja</h1>
+</div>
+
+<!-- PRIMER CONTENEDOR: NOVIO -->
+<div class="contenidoE">
+  <h2>Novio</h2>
+</div>
+
+
+<div class="carrusel-contenedor">
+  <!-- Contenedor tipo carrusel -->
+  <button class="btn-carrusel izquierda" onclick="moverCarrusel('carrusel-NOVIO', -1)">◀️</button>
+
+  <div class="carrusel" id="carrusel-NOVIO" data-posicion="0">
+    <div class="item"><img src="imgPareja/CH.jpg" alt="Producto 1"/>  <p>Hot Wheels Challenger </p>
+    <div class="precio" data-precio="50.00">$50.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Hot Wheels Challenger" 
+          data-precio="50.00"
+          data-id="BL001">
+    Agregar al carrito
+    </button>
+    </div>
+      <div class="item"><img src="imgPareja/FK.jpg" alt="Producto 2"/> <p>Funko De Levi</p>  
+    <div class="precio" data-precio="150.00">$150.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Funko De Levi" 
+          data-precio="150.00"
+          data-id="BL002">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgPareja/N.jpg" alt="Producto 3"/>   <p>Pistola Nerf Elite 2.0</p> 
+    <div class="precio" data-precio="190.00">$190.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Pistola Nerf Elite 2.0" 
+          data-precio="190.00"
+          data-id="BL003">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgPareja/CT.jpg" alt="Producto 4"/>  <p>Cartera Negra</p> 
+    <div class="precio" data-precio="80.00">$80.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Cartera Negra" 
+          data-precio="80.00"
+          data-id="BL004">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgPareja/PF.jpg" alt="Producto 5"/>   <p>Perfume De Hombre</p>
+    <div class="precio" data-precio="220.00">220.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Perfume De Hombre" 
+          data-precio="220.00"
+          data-id="BL005">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgPareja/YL.jpg" alt="Producto 6"/>  <p>Camisa De Compresion YL</p>
+    <div class="precio" data-precio="300.00">$300.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Camisa De Compresion YL" 
+          data-precio="300.00"
+          data-id="BL006">
+    Agregar al carrito
+    </button> 
+      </div>
+    </div>
+  
+
+  <button class="btn-carrusel derecha" onclick="moverCarrusel('carrusel-NOVIO', 1)">▶️</button>
+</div>
+
+
+<!-- SEGUNDO CONTENEDOR: NOVIA -->
+<div class="contenidoE">
+  <h2>Novia</h2>
+</div>
+
+<div class="carrusel-contenedor">
+
+  <button class="btn-carrusel izquierda" onclick="moverCarrusel('carrusel-NOVIA', -1)">◀️</button>
+
+  <div class="carrusel" id="carrusel-NOVIA" data-posicion="0">
+    <div class="item"><img src="imgPareja/FLOR.jpg" alt="Producto 1"/>  <p>Lampara De Flores</p>
+  <div class="precio" data-precio="245.00">$245.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Lampara De Flores" 
+          data-precio="245.00"
+          data-id="BL007">
+    Agregar al carrito
+    </button>
+    </div>
+      <div class="item"><img src="imgPareja/stich.jpg" alt="Producto 2"/>  <p>Mameluco De stich</p>
+    <div class="precio" data-precio="120.00">$120.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Mameluco De stich" 
+          data-precio="120.00"
+          data-id="BL008">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgPareja/lego.jpg" alt="Producto 3"/>  <p>Flor De Lego</p>
+    <div class="precio" data-precio="200.00">$200.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Flor De Lego" 
+          data-precio="200.00"
+          data-id="BL009">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgPareja/collar.jpg" alt="Producto 4"/>  <p>Collar De Corazon</p>
+    <div class="precio" data-precio="230.00">$230.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Collar De Corazon" 
+          data-precio="230.00"
+          data-id="BL0010">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgPareja/mapache.jpg" alt="Producto 5"/>  <p>Mapache De Peluche</p>
+     <div class="precio" data-precio="110.00">$110.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Mapache De Peluche" 
+          data-precio="110.00"
+          data-id="BL0011">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgPareja/maquillaje.jpg" alt="Producto 6"/>  <p>Kit De Maquillaje</p>
+    <div class="precio" data-precio="300.00">$300.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Kit De Maquillaje" 
+          data-precio="300.00"
+          data-id="BL0012">
+    Agregar al carrito
+    </button>
+      </div>
+    </div>  
+  
+  <button class="btn-carrusel derecha" onclick="moverCarrusel('carrusel-NOVIA', 1)">▶️</button>
+</div>
+
+<!--TERCERA SECCION ROPA EN CONJUNTO-->
+<div class="contenidoE">
+  <h2>Twins</h2>
+</div>
+
+ <div class="carrusel-contenedor">
+  <button class="btn-carrusel izquierda" onclick="moverCarrusel('carrusel-ROPA', -1)">◀️</button>
+
+  <div class="carrusel" id="carrusel-ROPA" data-posicion="0">
+    <div class="item"><img src="imgPareja/gorros.jpg" alt="Producto 1"/> <p>Gorros De Corazon</p>
+  <div class="precio" data-precio="130.00">$130.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Gorros De Corazon" 
+          data-precio="130.00"
+          data-id="BL0013">
+    Agregar al carrito
+    </button>
+    </div>
+      <div class="item"><img src="imgPareja/guantes.jpg" alt="Producto 2"/> <p>Guantes Unidos</p>
+    <div class="precio" data-precio="100.00">$100.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Guantes Unidos" 
+          data-precio="100.00"
+          data-id="BL0014">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgPareja/pantunflas.jpg" alt="Producto 3"/> <p>Pantunflas De Peluche</p>
+    <div class="precio" data-precio="150.00">$150.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Pantunflas De Peluche" 
+          data-precio="150.00"
+          data-id="BL0015">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgPareja/termos.jpg" alt="Producto 4"/> <p>Termos Combinados</p>
+    <div class="precio" data-precio="180.00">$180.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Termos Combinados" 
+          data-precio="180.00"
+          data-id="BL0016">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgPareja/pulseras.jpg" alt="Producto 5"/> <p>Pulseras En Conjunto</p>
+    <div class="precio" data-precio="115.00">$115.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Pulseras En Conjunto" 
+          data-precio="115.00"
+          data-id="BL0017">
+    Agregar al carrito
+    </button>
+      </div>
+    <div class="item"><img src="imgPareja/camisas.jpg" alt="Producto 5"/> <p>Camisas Combinadas</p>
+    <div class="precio" data-precio="210.00">$210.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Camisas Combinadas" 
+          data-precio="210.00"
+          data-id="BL0018">
+    Agregar al carrito
+    </button>
+    </div>
+  </div>
+
+  <button class="btn-carrusel derecha" onclick="moverCarrusel('carrusel-ROPA', 1)">▶️</button>
+</div>
+
+
+<!-- BARRA DE ABAJO -->
+<div class="barra-inferior">
+  <div class="total-info">
+    <button class="carrito-icono" id="btn-ver-carrito">🛒</button>
+    <span class="total-texto">$0.00</span>
+  </div>
+  <div class="btn-CCT">
+    <a href="index.html">CCT</a>
+  </div>
+  <button class="btn-qr">QR</button>
+</div>
+
+
+<!-- Modal del Carrito -->
+<div id="modal-carrito" class="modal-carrito">
+  <div class="modal-contenido">
+    <span class="cerrar-modal">&times;</span>
+    <h2>Tu Carrito de Compras</h2>
+    <div id="lista-carrito" class="lista-carrito">
+      <!-- Los productos aparecerán aquí -->
+    </div>
+    <div class="modal-total">
+      <span>Total:</span>
+      <span id="total-modal">$0.00</span>
+    </div>
+    <button id="vaciar-carrito" class="btn-vaciar">Vaciar Carrito</button>
+  </div>
+</div>
+
+<!-- Modal del QR -->
+<div id="modal-qr" class="modal-qr">
+  <div class="modal-contenido-qr">
+    <span class="cerrar-modal-qr">&times;</span>
+    <h2>Pago con QR</h2>
+    
+    <div class="qr-container">
+      <!-- Aquí se generará el QR dinámicamente -->
+      <div id="codigo-qr"></div>
+      <div class="total-qr">
+        <span>Total a pagar:</span>
+        <span id="total-qr">$0.00</span>
+      </div>
+    </div>
+    
+    <div class="botones-qr">
+      <button id="btn-aceptar-qr" class="btn-aceptar">Aceptar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de confirmación de pago -->
+<div id="modal-confirmacion" class="modal-confirmacion">
+  <div class="modal-contenido-confirmacion">
+    <h2>Confirmar método de pago</h2>
+    <p>¿Cómo deseas realizar el pago?</p>
+    
+    <div class="opciones-pago">
+      <button id="btn-presencial" class="btn-metodo">
+        <span>💵</span> Pago en tienda
+      </button>
+      <button id="btn-transferencia" class="btn-metodo">
+        <span>📱</span> Transferencia
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 4: Pago en Tienda (nuevo) -->
+<div id="modal-pago-tienda" class="modal-pago-tienda">
+  <div class="modal-contenido-pago">
+    <span class="cerrar-modal-pago">&times;</span>
+    <h2>Pago en Tienda</h2>
+    
+    <!-- QR regenerado -->
+    <div id="qr-pago-tienda"></div>
+    
+    <!-- Total -->
+    <div class="total-pago-tienda">
+      <span>Total a pagar:</span>
+      <span id="total-pago-tienda">$0.00</span>
+    </div>
+    
+    <!-- Mensaje destacado -->
+    <div class="mensaje-destacado">
+      <strong>¡Favor de escanear el QR en el establecimiento!</strong>
+    </div>
+    
+    <!-- Botón Cerrar -->
+    <button id="btn-cerrar-pago" class="btn-cerrar">Cerrar</button>
+  </div>
+</div>
+
+
+<script src="script.js"> </script> 
+<script src="carrito.js"></script> 
+</body>
+</html>

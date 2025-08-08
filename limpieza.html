@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>CCT</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+</head>
+<body>
+
+<!--BARRA DE ARRIBA-->
+<div class="barra-superior">
+  <div class="nombre-tienda">CCT</div>
+
+  <div class="frases">
+    <b><span>LA MEJOR TIENDA DEL MUNDO,</span>
+    <span>COMPRA Y RECOGE FÁCIL</span></b>
+  </div>
+
+  <div class="busqueda-categorias">
+    <input type="text" placeholder="Buscar productos...">
+    <button class="lupa">🔍</button>
+    <button class="btn-categorias" onclick="toggleMenu()">≡</button>
+
+<div id="menu-secciones" class="menu-secciones">
+    <a href="alimentos.html">Alimentos</a>
+    <a href="limpieza.html">Productos de limpieza</a>
+    <a href="hogar.html">Productos para el hogar</a>
+    <a href="libros.html">Libros</a>
+    <a href="electrodomesticos.html">Electrodomesticos</a>
+    <a href="pareja.html">Para la pareja</a>
+    </div>
+</div>
+</div>
+
+
+<!--CONTENIDO YA-->
+<div class="contenidoNOMBRES">
+  <h1>  Productos de limpieza</h1>
+  </div>
+
+<!-- PRIMER CONTENEDOR: HOGAR -->
+<div class="contenidoE">
+  <h2>Hogar</h2>
+</div>
+
+
+<div class="carrusel-contenedor">
+  <!-- Contenedor tipo carrusel -->
+  <button class="btn-carrusel izquierda" onclick="moverCarrusel('carrusel-HOGAR', -1)">◀️</button>
+
+  <div class="carrusel" id="carrusel-HOGAR" data-posicion="0">
+    <div class="item"><img src="imgLimpieza/trapeador.jpg" alt="Producto 1" /> <p>Trapeador</p>
+    <div class="precio" data-precio="250.00">$250.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Trapeador" 
+          data-precio="250.00"
+          data-id="EL001">
+    Agregar al carrito
+    </button>
+    </div>
+      <div class="item"><img src="imgLimpieza/fabuloso.jpg" alt="Producto 2" />  <p>Fabuloso Morado</p>
+      <div class="precio" data-precio="80.00">$80.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Fabuloso Morado" 
+          data-precio="80.00"
+          data-id="EL002">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgLimpieza/escoba.jpg" alt="Producto 3" />   <p>Escoba</p>
+      <div class="precio" data-precio="110.00">$110.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Escoba" 
+          data-precio="110.00"
+          data-id="EL003">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgLimpieza/cepillo.jpg" alt="Producto 4" />    <p>Escobilla De Baño</p>
+      <div class="precio" data-precio="70.00">$70.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Escobilla De Baño" 
+          data-precio="70.00"
+          data-id="EL004">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgLimpieza/trapos.jpg" alt="Producto 5" />   <p>Trapos De Cocina</p>
+      <div class="precio" data-precio="90.00">$90.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Trapos De Cocina" 
+          data-precio="90.00"
+          data-id="EL005">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgLimpieza/spray.jpg" alt="Producto 6" />    <p>Spray Multiusos</p>
+      <div class="precio" data-precio="120.00">$120.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Spray Multiusos" 
+          data-precio="120.00"
+          data-id="EL006">
+    Agregar al carrito
+    </button>
+      </div>
+    </div>
+  
+
+  <button class="btn-carrusel derecha" onclick="moverCarrusel('carrusel-HOGAR', 1)">▶️</button>
+</div>
+
+
+<!-- SEGUNDO CONTENEDOR: AUTOS -->
+<div class="contenidoE">
+  <h2>Autos</h2>
+</div>
+
+<div class="carrusel-contenedor">
+
+  <button class="btn-carrusel izquierda" onclick="moverCarrusel('carrusel-AUTOS', -1)">◀️</button>
+
+  <div class="carrusel" id="carrusel-AUTOS" data-posicion="0">
+    <div class="item"><img src="imgLimpieza/arbolito.jpg" alt="Producto 1" />    <p>Ambientador De Arbolito</p>
+    <div class="precio" data-precio="50.00">$50.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Ambientador De Arbolito" 
+          data-precio="50.00"
+          data-id="EL007">
+    Agregar al carrito
+    </button>
+    </div>
+      <div class="item"><img src="imgLimpieza/aspiradora.jpg" alt="Producto 2" />   <p>Aspiradora Chica</p>
+      <div class="precio" data-precio="140.00">$140.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Aspiradora Chica" 
+          data-precio="140.00"
+          data-id="EL008">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgLimpieza/llantas.jpg" alt="Producto 3" />   <p>Limpiador De Llantas</p>
+      <div class="precio" data-precio="115.00">$115.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Limpiador De Llantas" 
+          data-precio="115.00"
+          data-id="EL009">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgLimpieza/rines.jpg" alt="Producto 4" />    <p>Limpiador De Rines</p>
+      <div class="precio" data-precio="125.00">$125.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Limpiador De Rines" 
+          data-precio="125.00"
+          data-id="EL0010">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgLimpieza/toalla..jpg" alt="Producto 5" />   <p>Toalla De Microfibra</p>
+      <div class="precio" data-precio="250.00">$250.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Toalla De Microfibra" 
+          data-precio="250.00"
+          data-id="EL0011">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgLimpieza/maquina.jpg" alt="Producto 6" />   <p>Máquina De Lavado</p>
+      <div class="precio" data-precio="500.00">$500.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Máquina De Lavado" 
+          data-precio="500.00"
+          data-id="EL0012">
+    Agregar al carrito
+    </button>
+      </div>
+    </div>  
+  
+  <button class="btn-carrusel derecha" onclick="moverCarrusel('carrusel-AUTOS', 1)">▶️</button>
+</div>
+
+<!--TERCERA SECCION  AROMANTIZANTES-->
+<div class="contenidoE">
+  <h2>Aromantizantes</h2>
+</div>
+
+ <div class="carrusel-contenedor">
+  <button class="btn-carrusel izquierda" onclick="moverCarrusel('carrusel-AROMANTIZANTES', -1)">◀️</button>
+
+  <div class="carrusel" id="carrusel-AROMANTIZANTES" data-posicion="0">
+    <div class="item"><img src="imgLimpieza/humo.jpg" alt="Producto 1" />   <p>Humo Aromatizante</p>
+    <div class="precio" data-precio="70.00">$70.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Humo Aromatizante" 
+          data-precio="70.00"
+          data-id="EL0013">
+    Agregar al carrito
+    </button>
+    </div>
+      <div class="item"><img src="imgLimpieza/morado.jpg" alt="Producto 2" />    <p>Ambientador Morado</p>
+      <div class="precio" data-precio="100.00">$100.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Ambientador Morado" 
+          data-precio="100.00"
+          data-id="EL0014">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgLimpieza/pack.jpg" alt="Producto 3" />    <p>Pack Aromatizante (6)</p>
+      <div class="precio" data-precio="180.00">$180.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Pack Aromatizante (6)" 
+          data-precio="180.00"
+          data-id="EL0015">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgLimpieza/MAaromantizante.jpg" alt="Producto 4" />    <p>Ambientador De Maquina De Colores</p>
+      <div class="precio" data-precio="300.00">$300.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Ambientador De Maquina De Colores" 
+          data-precio="300.00"
+          data-id="EL0016">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgLimpieza/otramaquina.jpg" alt="Producto 5" />   <p>Ambientador De Maquina </p>
+      <div class="precio" data-precio="280.00">$280.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Ambientador De Maquina" 
+          data-precio="280.00"
+          data-id="EL0017">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgLimpieza/ambiente.jpg" alt="Producto 5" />    <p>Ambientador De Enchufe</p>
+      <div class="precio" data-precio="80.00">$80.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Ambientador De Enchufe" 
+          data-precio="80.00"
+          data-id="EL0018">
+    Agregar al carrito
+    </button>
+      </div>
+  </div>
+
+  <button class="btn-carrusel derecha" onclick="moverCarrusel('carrusel-AROMANTIZANTES', 1)">▶️</button>
+</div>
+
+
+<!-- BARRA DE ABAJO -->
+<div class="barra-inferior">
+  <div class="total-info">
+    <button class="carrito-icono" id="btn-ver-carrito">🛒</button>
+    <span class="total-texto">$0.00</span>
+  </div>
+  <div class="btn-CCT">
+    <a href="index.html">CCT</a>
+  </div>
+  <button class="btn-qr">QR</button>
+</div>
+
+
+<!-- Modal del Carrito -->
+<div id="modal-carrito" class="modal-carrito">
+  <div class="modal-contenido">
+    <span class="cerrar-modal">&times;</span>
+    <h2>Tu Carrito de Compras</h2>
+    <div id="lista-carrito" class="lista-carrito">
+      <!-- Los productos aparecerán aquí -->
+    </div>
+    <div class="modal-total">
+      <span>Total:</span>
+      <span id="total-modal">$0.00</span>
+    </div>
+    <button id="vaciar-carrito" class="btn-vaciar">Vaciar Carrito</button>
+  </div>
+</div>
+
+<!-- Modal del QR -->
+<div id="modal-qr" class="modal-qr">
+  <div class="modal-contenido-qr">
+    <span class="cerrar-modal-qr">&times;</span>
+    <h2>Pago con QR</h2>
+    
+    <div class="qr-container">
+      <!-- Aquí se generará el QR dinámicamente -->
+      <div id="codigo-qr"></div>
+      <div class="total-qr">
+        <span>Total a pagar:</span>
+        <span id="total-qr">$0.00</span>
+      </div>
+    </div>
+    
+    <div class="botones-qr">
+      <button id="btn-aceptar-qr" class="btn-aceptar">Aceptar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de confirmación de pago -->
+<div id="modal-confirmacion" class="modal-confirmacion">
+  <div class="modal-contenido-confirmacion">
+    <h2>Confirmar método de pago</h2>
+    <p>¿Cómo deseas realizar el pago?</p>
+    
+    <div class="opciones-pago">
+      <button id="btn-presencial" class="btn-metodo">
+        <span>💵</span> Pago en tienda
+      </button>
+      <button id="btn-transferencia" class="btn-metodo">
+        <span>📱</span> Transferencia
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 4: Pago en Tienda (nuevo) -->
+<div id="modal-pago-tienda" class="modal-pago-tienda">
+  <div class="modal-contenido-pago">
+    <span class="cerrar-modal-pago">&times;</span>
+    <h2>Pago en Tienda</h2>
+    
+    <!-- QR regenerado -->
+    <div id="qr-pago-tienda"></div>
+    
+    <!-- Total -->
+    <div class="total-pago-tienda">
+      <span>Total a pagar:</span>
+      <span id="total-pago-tienda">$0.00</span>
+    </div>
+    
+    <!-- Mensaje destacado -->
+    <div class="mensaje-destacado">
+      <strong>¡Favor de escanear el QR en el establecimiento!</strong>
+    </div>
+    
+    <!-- Botón Cerrar -->
+    <button id="btn-cerrar-pago" class="btn-cerrar">Cerrar</button>
+  </div>
+</div>
+
+
+<script src="script.js"> </script>  
+<script src="carrito.js"></script>
+</body>
+</html>
+
+
+

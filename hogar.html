@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>CCT</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+</head>
+<body>
+
+<!--BARRA DE ARRIBA-->
+<div class="barra-superior">
+  <div class="nombre-tienda">CCT</div>
+
+  <div class="frases">
+    <b><span>LA MEJOR TIENDA DEL MUNDO,</span>
+    <span>COMPRA Y RECOGE FÁCIL</span></b>
+  </div>
+
+  <div class="busqueda-categorias">
+    <input type="text" placeholder="Buscar productos...">
+    <button class="lupa">🔍</button>
+    <button class="btn-categorias" onclick="toggleMenu()">≡</button>
+
+<div id="menu-secciones" class="menu-secciones">
+    <a href="alimentos.html">Alimentos</a>
+    <a href="limpieza.html">Productos de limpieza</a>
+    <a href="hogar.html">Productos para el hogar</a>
+    <a href="libros.html">Libros</a>
+    <a href="electrodomesticos.html">Electrodomesticos</a>
+    <a href="pareja.html">Para la pareja</a>
+    </div>
+</div>
+</div>
+
+
+<!--CONTENIDO YA-->
+<div class="contenidoNOMBRES">
+  <h1> Sección de hogar</h1>
+</div>
+
+<!-- PRIMER CONTENEDOR: MUEBLES -->
+<div class="contenidoE">
+  <h2>Muebles</h2>
+</div>
+
+
+<div class="carrusel-contenedor">
+  <!-- Contenedor tipo carrusel -->
+  <button class="btn-carrusel izquierda" onclick="moverCarrusel('carrusel-MUEBLES', -1)">◀️</button>
+
+  <div class="carrusel" id="carrusel-MUEBLES" data-posicion="0">
+    <div class="item"><img src="imgHogar/sillones.jpg" alt="Producto 1"/>  <p>Sillon En L</p>
+    <div class="precio" data-precio="430.00">$430.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Sillon En L" 
+          data-precio="43O.00"
+          data-id="DL001">
+    Agregar al carrito
+    </button>
+    </div>
+      <div class="item"><img src="imgHogar/gabinete.jpg" alt="Producto 2"/>  <p>Gabinete</p>
+      <div class="precio" data-precio="500.00">$500.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Gabinete" 
+          data-precio="500.00"
+          data-id="DL002">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgHogar/espejo.jpg" alt="Producto 3"/>    <p>Espejo Cuadrado</p>
+      <div class="precio" data-precio="300.00">$300.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Espejo Cuadrado" 
+          data-precio="300.00"
+          data-id="DL003">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgHogar/cuadro.jpg" alt="Producto 4"/>   <p>Cuadro De Flor Gris</p>
+      <div class="precio" data-precio="410.00">$410.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Cuadro De Flor Gris" 
+          data-precio="410.00"
+          data-id="DL004">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgHogar/centro.jpg" alt="Producto 5"/>   <p>Mesa De Centro</p>
+      <div class="precio" data-precio="280.00">$280.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Mesa De Centro" 
+          data-precio="280.00"
+          data-id="DL005">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgHogar/bano.jpg" alt="Producto 6"/>    <p>Gabinete Para Baño</p>
+      <div class="precio" data-precio="600.00">$600.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Gabinete Para Baño" 
+          data-precio="600.00"
+          data-id="DL006">
+    Agregar al carrito
+    </button>
+      </div>
+    </div>
+  
+
+  <button class="btn-carrusel derecha" onclick="moverCarrusel('carrusel-MUEBLES', 1)">▶️</button>
+</div>
+
+
+<!-- SEGUNDO CONTENEDOR: COCINA -->
+<div class="contenidoE">
+  <h2>Cocina</h2>
+</div>
+
+<div class="carrusel-contenedor">
+
+  <button class="btn-carrusel izquierda" onclick="moverCarrusel('carrusel-COCINA', -1)">◀️</button>
+
+  <div class="carrusel" id="carrusel-COCINA" data-posicion="0">
+    <div class="item"><img src="imgHogar/aire.jpg" alt="Producto 1"/>  <p>Aire Acondicionado</p>
+    <div class="precio" data-precio="800.00">$800.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Gabinete Para Baño" 
+          data-precio="800.00"
+          data-id="DL007">
+    Agregar al carrito
+    </button>
+    </div>
+      <div class="item"><img src="imgHogar/comedor.jpg" alt="Producto 2"/>  <p>Comedor</p>
+<div class="precio" data-precio="1300.00">$1300.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Comedor" 
+          data-precio="1300.00"
+          data-id="DL008">
+    Agregar al carrito
+    </button>      
+      </div>
+      <div class="item"><img src="imgHogar/cuchillo.jpg" alt="Producto 3"/>  <p>Cuchillos De Cocina</p>
+      <div class="precio" data-precio="450.00">$450.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Cuchillos De Cocina" 
+          data-precio="450.00"
+          data-id="DL009">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgHogar/toopers.jpg" alt="Producto 4"/>  <p>Topers</p>
+      <div class="precio" data-precio="300.00">$300.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Topers" 
+          data-precio="300.00"
+          data-id="DL0010">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgHogar/ollas.jpg" alt="Producto 5"/> <p>Juego De Ollas</p>
+      <div class="precio" data-precio="730.00">$730.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Juego De Ollas" 
+          data-precio="730.00"
+          data-id="DL0011">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgHogar/platos.jpg" alt="Producto 6"/>  <p>Platos</p>
+      <div class="precio" data-precio="250.00">$250.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Platos" 
+          data-precio="250.00"
+          data-id="DL0012">
+    Agregar al carrito
+    </button>
+      </div>
+    </div>  
+  
+  <button class="btn-carrusel derecha" onclick="moverCarrusel('carrusel-COCINA', 1)">▶️</button>
+</div>
+
+<!--TERCERA SECCION HABITACIONES-->
+<div class="contenidoE">
+  <h2>Habitaciones</h2>
+</div>
+
+ <div class="carrusel-contenedor">
+  <button class="btn-carrusel izquierda" onclick="moverCarrusel('carrusel-HABITACIONES--', -1)">◀️</button>
+
+  <div class="carrusel" id="carrusel-HABITACIONES--" data-posicion="0">
+    <div class="item"><img src="imgHogar/buroCama.jpg" alt="Producto 1"/>  <p>Buró Para Cama</p>
+    <div class="precio" data-precio="710.00">$710.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Buró Para Cama" 
+          data-precio="710.00"
+          data-id="DL0013">
+    Agregar al carrito
+    </button>
+    </div>
+      <div class="item"><img src="imgHogar/matrimonial.jpg" alt="Producto 2"/>   <p>Cama Matrimonial</p>
+      <div class="precio" data-precio="2500.00">$2500.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Cama Matrimonial" 
+          data-precio="2500.00"
+          data-id="DL0014">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgHogar/gamer.jpg" alt="Producto 3"/>   <p>Silla Gamer</p>
+      <div class="precio" data-precio="1600.00">$1600.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Silla Gamer" 
+          data-precio="1600.00"
+          data-id="DL0015">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgHogar/puff.jpg" alt="Producto 4"/>   <p>Puff</p>
+      <div class="precio" data-precio="800.00">$800.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Puff" 
+          data-precio="800.00"
+          data-id="DL0016">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgHogar/fra.jpg" alt="Producto 5"/>   <p>Frazada</p>
+      <div class="precio" data-precio="300.00">$300.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Frazada" 
+          data-precio="300.00"
+          data-id="DL0017">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgHogar/escritorio.jpg" alt="Producto 6"/>   <p>Escritorio</p>
+      <div class="precio" data-precio="1300.00">$1300.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Escritorio" 
+          data-precio="1300.00"
+          data-id="DL0018">
+    Agregar al carrito
+    </button>
+      </div>
+  </div>
+
+  <button class="btn-carrusel derecha" onclick="moverCarrusel('carrusel-HABITACIONES--', 1)">▶️</button>
+</div>
+
+
+<!-- BARRA DE ABAJO -->
+<div class="barra-inferior">
+  <div class="total-info">
+    <button class="carrito-icono" id="btn-ver-carrito">🛒</button>
+    <span class="total-texto">$0.00</span>
+  </div>
+  <div class="btn-CCT">
+    <a href="index.html">CCT</a>
+  </div>
+  <button class="btn-qr">QR</button>
+</div>
+
+
+<!-- Modal del Carrito -->
+<div id="modal-carrito" class="modal-carrito">
+  <div class="modal-contenido">
+    <span class="cerrar-modal">&times;</span>
+    <h2>Tu Carrito de Compras</h2>
+    <div id="lista-carrito" class="lista-carrito">
+      <!-- Los productos aparecerán aquí -->
+    </div>
+    <div class="modal-total">
+      <span>Total:</span>
+      <span id="total-modal">$0.00</span>
+    </div>
+    <button id="vaciar-carrito" class="btn-vaciar">Vaciar Carrito</button>
+  </div>
+</div>
+
+<!-- Modal del QR -->
+<div id="modal-qr" class="modal-qr">
+  <div class="modal-contenido-qr">
+    <span class="cerrar-modal-qr">&times;</span>
+    <h2>Pago con QR</h2>
+    
+    <div class="qr-container">
+      <!-- Aquí se generará el QR dinámicamente -->
+      <div id="codigo-qr"></div>
+      <div class="total-qr">
+        <span>Total a pagar:</span>
+        <span id="total-qr">$0.00</span>
+      </div>
+    </div>
+    
+    <div class="botones-qr">
+      <button id="btn-aceptar-qr" class="btn-aceptar">Aceptar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de confirmación de pago -->
+<div id="modal-confirmacion" class="modal-confirmacion">
+  <div class="modal-contenido-confirmacion">
+    <h2>Confirmar método de pago</h2>
+    <p>¿Cómo deseas realizar el pago?</p>
+    
+    <div class="opciones-pago">
+      <button id="btn-presencial" class="btn-metodo">
+        <span>💵</span> Pago en tienda
+      </button>
+      <button id="btn-transferencia" class="btn-metodo">
+        <span>📱</span> Transferencia
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 4: Pago en Tienda (nuevo) -->
+<div id="modal-pago-tienda" class="modal-pago-tienda">
+  <div class="modal-contenido-pago">
+    <span class="cerrar-modal-pago">&times;</span>
+    <h2>Pago en Tienda</h2>
+    
+    <!-- QR regenerado -->
+    <div id="qr-pago-tienda"></div>
+    
+    <!-- Total -->
+    <div class="total-pago-tienda">
+      <span>Total a pagar:</span>
+      <span id="total-pago-tienda">$0.00</span>
+    </div>
+    
+    <!-- Mensaje destacado -->
+    <div class="mensaje-destacado">
+      <strong>¡Favor de escanear el QR en el establecimiento!</strong>
+    </div>
+    
+    <!-- Botón Cerrar -->
+    <button id="btn-cerrar-pago" class="btn-cerrar">Cerrar</button>
+  </div>
+</div>
+
+
+
+<script src="script.js"> </script>  
+<script src="carrito.js"></script>
+</body>
+</html>

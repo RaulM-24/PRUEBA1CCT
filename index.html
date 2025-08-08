@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>CCT</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+
+</head>
+
+<body>
+
+<!--BARRA DE ARRIBA-->
+<div class="barra-superior">
+  <div class="nombre-tienda">CCT</div>
+
+  <div class="frases">
+    <b><span>LA MEJOR TIENDA DEL MUNDO,</span>
+    <span>COMPRA Y RECOGE FÁCIL</span></b>
+  </div>
+
+  <div class="busqueda-categorias">
+    <input type="text" placeholder="Buscar productos...">
+    <button class="lupa">🔍</button>
+    <button class="btn-categorias" onclick="toggleMenu()">≡</button>
+
+<div id="menu-secciones" class="menu-secciones">
+    <a href="alimentos.html">Alimentos</a>
+    <a href="limpieza.html">Productos de limpieza</a>
+    <a href="hogar.html">Productos para el hogar</a>
+    <a href="libros.html">Libros</a>
+    <a href="electrodomesticos.html">Electrodomesticos</a>
+    <a href="pareja.html">Para la pareja</a>
+    </div>
+
+  </div>
+
+
+
+</div>
+
+<!--CONTENIOD PRINCIPAL DE LA PAGINA -->
+<div class="contenido">
+
+<div class="ofertas">
+    <h2>🔥 Ofertas del mes</h2>
+    <div class="galeria-ofertas">
+        <img src="img/oferta1.jpg" alt="Oferta 1">
+        <img src="img/oferta2.jpg" alt="Oferta 2">  
+        <img src="img/oferta3.jpg" alt="Oferta 3">
+    </div>
+</div>   
+
+<section class="noticias">
+    <h2>📰 Noticias de la tienda</h2>
+    <div class="noticia-box">
+         <p><strong>¡Buscamos personal en diferentes areas!</strong><br>
+            Ven a conocer nuestra nueva ubicación en el centro y por mas informacion. num.61424567785</p>
+        </div>
+    </section>
+
+    <section class="invitacion">
+        <h2>📍 Visítanos en tienda</h2>
+        <div>
+        <p> no sea huevon y venga a la fackin tienda alv </p>
+        <img src="img/mapa.jpg" alt="Mapa ubicación" class="mapa-ref">
+        </div>
+    </section>
+</div>
+
+<!-- BARRA DE ABAJO -->
+<div class="barra-inferior">
+  <div class="total-info">
+    <button class="carrito-icono" id="btn-ver-carrito">🛒</button>
+    <span class="total-texto">$0.00</span>
+  </div>
+  <button class="btn-qr">QR</button>
+</div>
+
+
+<!-- Modal del Carrito -->
+<div id="modal-carrito" class="modal-carrito">
+  <div class="modal-contenido">
+    <span class="cerrar-modal">&times;</span>
+    <h2>Tu Carrito de Compras</h2>
+    <div id="lista-carrito" class="lista-carrito">
+      <!-- Los productos aparecerán aquí -->
+    </div>
+    <div class="modal-total">
+      <span>Total:</span>
+      <span id="total-modal">$0.00</span>
+    </div>
+    <button id="vaciar-carrito" class="btn-vaciar">Vaciar Carrito</button>
+  </div>
+</div>
+
+<!-- Modal del QR -->
+<div id="modal-qr" class="modal-qr">
+  <div class="modal-contenido-qr">
+    <span class="cerrar-modal-qr">&times;</span>
+    <h2>Pago con QR</h2>
+    
+    <div class="qr-container">
+      <!-- Aquí se generará el QR dinámicamente -->
+      <div id="codigo-qr"></div>
+      <div class="total-qr">
+        <span>Total a pagar:</span>
+        <span id="total-qr">$0.00</span>
+      </div>
+    </div>
+    
+    <div class="botones-qr">
+      <button id="btn-aceptar-qr" class="btn-aceptar">Aceptar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de confirmación de pago -->
+<div id="modal-confirmacion" class="modal-confirmacion">
+  <div class="modal-contenido-confirmacion">
+    <h2>Confirmar método de pago</h2>
+    <p>¿Cómo deseas realizar el pago?</p>
+    
+    <div class="opciones-pago">
+      <button id="btn-presencial" class="btn-metodo">
+        <span>💵</span> Pago en tienda
+      </button>
+      <button id="btn-transferencia" class="btn-metodo">
+        <span>📱</span> Transferencia
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 4: Pago en Tienda (nuevo) -->
+<div id="modal-pago-tienda" class="modal-pago-tienda">
+  <div class="modal-contenido-pago">
+    <span class="cerrar-modal-pago">&times;</span>
+    <h2>Pago en Tienda</h2>
+    
+    <!-- QR regenerado -->
+    <div id="qr-pago-tienda"></div>
+    
+    <!-- Total -->
+    <div class="total-pago-tienda">
+      <span>Total a pagar:</span>
+      <span id="total-pago-tienda">$0.00</span>
+    </div>
+    
+    <!-- Mensaje destacado -->
+    <div class="mensaje-destacado">
+      <strong>¡Favor de escanear el QR en el establecimiento!</strong>
+    </div>
+    
+    <!-- Botón Cerrar -->
+    <button id="btn-cerrar-pago" class="btn-cerrar">Cerrar</button>
+  </div>
+</div>
+
+<!-- Modal de Transferencia -->
+<div id="modal-transferencia" class="modal">
+  <div class="modal-contenido">
+    <span class="cerrar-modal-transferencia">&times;</span>
+    <h2>Pago por Transferencia</h2>
+    
+    <!-- QR -->
+    <div id="qr-transferencia" class="qr-container"></div>
+    
+    <!-- Datos Bancarios -->
+    <div class="datos-bancarios">
+      <h3>Datos para transferencia</h3>
+      <p><strong>Banco:</strong> BBVA</p>
+      <p><strong>CLABE:</strong> 0123 4567 8910 1112 13</p>
+      <p><strong>Beneficiario:</strong> CCT S.A. de C.V.</p>
+      <p><strong>Referencia:</strong> CCT-<span id="referencia"></span></p>
+    </div>
+    
+    <!-- Mensaje Importante -->
+    <div class="mensaje-destacado">
+      <strong>¡Después de pagar, presenta el QR en tienda!</strong>
+    </div>
+    
+    <!-- Botones -->
+    <div class="botones-accion">
+      <button id="btn-ya-pague" class="btn-aceptar">Ya pagué</button>
+      <button id="btn-cancelar-transferencia" class="btn-cancelar">Cancelar</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"> </script>  
+<script src="carrito.js"></script>
+</body>
+</html>

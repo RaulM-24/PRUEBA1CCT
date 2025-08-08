@@ -1,0 +1,676 @@
+/* ==== AJUSTES GENERALES ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  padding-bottom: 100px; /* Deja espacio por la barra inferior */
+}
+
+/* ==== CONTENIDO INDEX ==== */
+.ofertas {
+  color: rgb(0, 0, 0);
+  padding: 20px 0;  /* Reducimos el padding horizontal */
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  width: 100%;     /* Ocupa todo el ancho */
+}
+
+.galeria-ofertas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;          /* Reducimos el gap para más horizontalidad */
+  padding: 10px 0;    /* Quitamos padding lateral */
+  width: 100%;
+  max-width: 100%;    /* Permite que ocupe todo el espacio */
+  margin: 0 auto;
+  overflow-x: auto;   /* Permite scroll horizontal si hay muchas imágenes */
+}
+
+/* Para las imágenes en general */
+.galeria-ofertas img {
+  width: 48%;          /* 2 imágenes por fila (casi 50% cada una) */
+  max-width: 400px;    /* Pero no más de 400px */
+  height: 200px;       /* Altura fija para uniformidad */
+  object-fit: cover;   /* Evita que se deformen */
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Para la tercera imagen (que ocupará ambas columnas) */
+.galeria-ofertas img:nth-child(3) {
+  width: 98%;         /* Casi el ancho completo */
+  max-width: 800px;   /* Más ancha que las otras */
+  height: 220px;      /* Un poco más alta */
+  margin-top: 10px;   /* Espacio arriba */
+}
+
+/* Efecto hover para todas las imágenes */
+.galeria-ofertas img:hover {
+  transform: scale(1.02); /* Ligero zoom */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.noticias {
+  background-color: #3498db;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.invitacion {
+  background-color: #2ecc71;
+  color: white;
+  padding: 30px 20px;  /* Más padding vertical */
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 30px;    /* Espacio superior */
+  border-radius: 12px; /* Bordes redondeados */
+  width: 100%;
+  max-width: 1200px;   /* Mismo ancho que las otras secciones */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Contenedor del texto e imagen */
+.invitacion > div {    /* Añade un div contenedor en tu HTML */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+/* Texto de invitación */
+.invitacion p {
+  font-size: 18px;
+  font-weight: normal;
+  max-width: 400px;
+  text-align: left;
+  margin: 0;          /* Quita márgenes por defecto */
+}
+
+/* Imagen del mapa */
+.mapa-ref {
+  width: 50%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+
+/* ==== BARRA SUPERIOR ==== */
+.barra-superior {
+  background-color: #c2270b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nombre-tienda {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.frases {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+  color: #fff;
+}
+
+.busqueda-categorias {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.busqueda-categorias input[type="text"] {
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.lupa,
+.btn-categorias {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.lupa:hover,
+.btn-categorias:hover {
+  background-color: #2980b9;
+}
+
+/* ==== MENÚ SECCIONES DESPLEGABLE ==== */
+.menu-secciones {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  padding: 10px;
+  top: 60px;
+  right: 30px;
+  border-radius: 8px;
+  z-index: 999;
+}
+
+.menu-secciones a {
+  text-decoration: none;
+  color: #333;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background 0.2s;
+  font-weight: bold;
+}
+
+.menu-secciones a:hover {
+  background-color: #f0f0f0;
+}
+
+/* ==== CONTENIDO GENERAL ==== */
+.contenidoNOMBRES {
+  padding: 30px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: #c2270b;
+}
+
+.contenidoE {
+  padding: 10px 30px;
+  font-size: 18px;
+  color: #333;
+}
+
+/* ==== CARRUSEL DE PRODUCTOS ==== */
+.carrusel-contenedor {
+  position: relative;
+  background-color: #fff;
+  padding: 20px;
+  margin: 30px auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 1200px;
+  overflow: hidden;
+}
+
+.carrusel {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease;
+}
+
+.item {
+  min-width: 30%;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  text-align: center;
+  padding: 10px;
+}
+
+.item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.btn-carrusel {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 14px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.btn-carrusel:hover {
+  background-color: #2980b9;
+}
+
+.btn-carrusel.izquierda {
+  left: -20px;
+}
+
+.btn-carrusel.derecha {
+  right: -20px;
+}
+
+
+/* ==== BOTONES DE AGREGAR AL CARRITO ==== */
+.btn-agregar {
+  background-color: #c2270b;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.btn-agregar:hover {
+  background-color: #e63900;
+}
+
+.btn-agregar:active {
+  transform: scale(0.98);
+}
+
+
+/* Estilos para el modal del carrito */
+.modal-carrito {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-contenido {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.cerrar-modal {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cerrar-modal:hover {
+  color: #333;
+}
+
+.lista-carrito {
+  margin: 20px 0;
+}
+
+.item-carrito {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.item-info {
+  flex: 2;
+}
+
+.item-controles {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-cantidad {
+  background-color: #f0f0f0;
+  border: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-cantidad:hover {
+  background-color: #e0e0e0;
+}
+
+.btn-eliminar {
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-eliminar:hover {
+  background-color: #cc0000;
+}
+
+.modal-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px 0;
+  padding-top: 10px;
+  border-top: 2px solid #c2270b;
+}
+
+.btn-vaciar {
+  background-color: #c2270b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+}
+
+.btn-vaciar:hover {
+  background-color: #a0200a;
+}
+
+
+/* ==== BARRA INFERIOR ==== */
+
+.carrito-icono {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 5px;
+  transition: transform 0.3s;
+}
+
+.carrito-icono:hover {
+  transform: scale(1.1);
+}
+
+.carrito-icono:active {
+  transform: scale(0.9);
+}
+
+
+
+
+.barra-inferior {
+  background-color: #c2270b;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 17px 30px;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.total-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.btn-qr {
+  background-color: #000;
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-CCT {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 22px 60px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    max-width: 150px;
+    text-align: center;
+}
+
+
+.btn-qr:hover {
+  background-color: #ff8800;
+}
+
+/* Estilos para el modal del QR */
+.modal-qr {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-contenido-qr {
+  background-color: white;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 350px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.qr-container {
+  margin: 20px 0;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+#codigo-qr {
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  background: white;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.total-qr {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+
+.botones-qr {
+  margin-top: 20px;
+}
+
+.btn-aceptar {
+  background-color: #c2270b;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-aceptar:hover {
+  background-color: #a0200a;
+}
+
+/* Estilos para el modal de confirmación */
+.modal-confirmacion {
+  display: none;
+  position: fixed;
+  z-index: 2100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-contenido-confirmacion {
+  background-color: white;
+  margin: 10% auto;
+  padding: 25px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.opciones-pago {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.btn-metodo {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn-metodo:hover {
+  background-color: #e0e0e0;
+}
+
+.btn-metodo span {
+  font-size: 20px;
+}
+
+/* Estilos para el nuevo modal */
+.modal-pago-tienda {
+  display: none;
+  position: fixed;
+  z-index: 2100; /* Mayor que los otros modales */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-contenido-pago {
+  background-color: white;
+  margin: 5% auto;
+  padding: 25px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 350px;
+  text-align: center;
+}
+
+.mensaje-destacado {
+  background-color: #FFF8E1;
+  border-left: 4px solid #FFC107;
+  padding: 10px;
+  margin: 20px 0;
+  font-size: 16px;
+}
+
+.mensaje-destacado strong {
+  color: #C2270B;
+}
+
+.btn-cerrar {
+  background-color: #C2270B;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Estilos para el modal de transferencia */
+.modal-transferencia .datos-bancarios {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 15px 0;
+  border-left: 4px solid #3498db;
+}
+
+.modal-transferencia .datos-bancarios p {
+  margin: 8px 0;
+}
+
+.modal-transferencia .mensaje-destacado {
+  background: #fff8e1;
+  padding: 12px;
+  border-radius: 6px;
+  text-align: center;
+  margin: 15px 0;
+  border-left: 4px solid #ffc107;
+}
+
+.modal-transferencia .botones-accion {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.modal-transferencia .btn-aceptar {
+  background: #28a745;
+  flex: 1;
+}
+
+.modal-transferencia .btn-cancelar {
+  background: #dc3545;
+  flex: 1;
+}

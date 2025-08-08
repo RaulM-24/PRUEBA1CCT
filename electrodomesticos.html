@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>CCT</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+</head>
+<body>
+
+<!--BARRA DE ARRIBA-->
+<div class="barra-superior">
+  <div class="nombre-tienda">CCT</div>
+
+  <div class="frases">
+    <b><span>LA MEJOR TIENDA DEL MUNDO,</span>
+    <span>COMPRA Y RECOGE FÁCIL</span></b>
+  </div>
+
+  <div class="busqueda-categorias">
+    <input type="text" placeholder="Buscar productos...">
+    <button class="lupa">🔍</button>
+    <button class="btn-categorias" onclick="toggleMenu()">≡</button>
+
+<div id="menu-secciones" class="menu-secciones">
+    <a href="alimentos.html">Alimentos</a>
+    <a href="limpieza.html">Productos de limpieza</a>
+    <a href="hogar.html">Productos para el hogar</a>
+    <a href="libros.html">Libros</a>
+    <a href="electrodomesticos.html">Electrodomesticos</a>
+    <a href="pareja.html">Para la pareja</a>
+    </div>
+</div>
+</div>
+
+
+<!--CONTENIDO YA-->
+<div class="contenidoNOMBRES">
+  <h1> Sección de electrodomesticos</h1>
+</div>
+
+<!-- PRIMER CONTENEDOR: COCINA -->
+<div class="contenidoE">
+  <h2>Cocina</h2>
+</div>
+
+
+<div class="carrusel-contenedor">
+  <!-- Contenedor tipo carrusel -->
+  <button class="btn-carrusel izquierda" onclick="moverCarrusel('carrusel-COCINA', -1)">◀️</button>
+
+  <div class="carrusel" id="carrusel-COCINA" data-posicion="0">
+    <div class="item"><img src="imgEle/air.jpg" alt="Producto 1"/>   <p>Air Fryer</p>
+    <div class="precio" data-precio="180.00">$180.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Air Fryer" 
+          data-precio="180.00"
+          data-id="FL001">
+    Agregar al carrito
+    </button>
+    </div>
+      <div class="item"><img src="imgEle/batidora.jpg" alt="Producto 2"/>   <p>Batidora</p>
+      <div class="precio" data-precio="200.00">$200.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Batidora" 
+          data-precio="200.00"
+          data-id="FL002">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgEle/cafetera.jpg" alt="Producto 3"/>    <p>Cafetera</p>
+      <div class="precio" data-precio="360.00">$360.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Cafetera" 
+          data-precio="360.00"
+          data-id="FL003">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgEle/horno.jpg" alt="Producto 4"/>   <p>Horno Eléctrico</p>
+      <div class="precio" data-precio="270.00">$270.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Horno Eléctrico" 
+          data-precio="270.00"
+          data-id="FL004">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgEle/licuadora.jpg" alt="Producto 5"/>   <p>Licuadora</p>  
+      <div class="precio" data-precio="180.00">$180.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Licuadora" 
+          data-precio="180.00"
+          data-id="FL005">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgEle/micro.jpg" alt="Producto 6"/>    <p>Microondas</p>
+      <div class="precio" data-precio="310.00">$310.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Microondas" 
+          data-precio="310.00"
+          data-id="FL006">
+    Agregar al carrito
+    </button>
+      </div>
+    </div>
+  
+
+  <button class="btn-carrusel derecha" onclick="moverCarrusel('carrusel-COCINA', 1)">▶️</button>
+</div>
+
+
+<!-- SEGUNDO CONTENEDOR:  LIMPIEZA -->
+<div class="contenidoE">
+  <h2>Limpieza</h2>
+</div>
+
+<div class="carrusel-contenedor">
+
+  <button class="btn-carrusel izquierda" onclick="moverCarrusel('carrusel-LIMPIEZA', -1)">◀️</button>
+
+  <div class="carrusel" id="carrusel-LIMPIEZA" data-posicion="0">
+    <div class="item"><img src="imgEle/aspiradora.jpg" alt="Producto 1"/>   <p>Aspiradora</p>
+    <div class="precio" data-precio="280.00">$280.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Aspiradora" 
+          data-precio="280.00"
+          data-id="FL007">
+    Agregar al carrito
+    </button>
+    </div>
+      <div class="item"><img src="imgEle/aspiradoraChingona.jpg" alt="Producto 2"/>  <p>Aspiradora De Mano</p>
+      <div class="precio" data-precio="300.00">$300.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Aspiradora De Mano" 
+          data-precio="300.00"
+          data-id="FL008">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgEle/aspiradoraCircular.jpg" alt="Producto 3"/>   <p>Aspiradora Circular</p>
+      <div class="precio" data-precio="480.00">$480.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Aspiradora Circular" 
+          data-precio="480.00"
+          data-id="FL009">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgEle/refri.jpg" alt="Producto 4"/>   <p>Refrigerador</p>
+      <div class="precio" data-precio="680.00">$680.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Refrigerador" 
+          data-precio="680.00"
+          data-id="FL0010">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgEle/lavaadora.jpg" alt="Producto 5"/>   <p>Lavadora</p>
+      <div class="precio" data-precio="600.00">$600.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Lavadora" 
+          data-precio="600.00"
+          data-id="FL0011">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgEle/aspiradorafloja.jpg" alt="Producto 6"/>  <p>Aspiradora Larga</p>
+      <div class="precio" data-precio="340.00">$340.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Aspiradora Larga" 
+          data-precio="340.00"
+          data-id="FL0012">
+    Agregar al carrito
+    </button>
+      </div>
+    </div>  
+  
+  <button class="btn-carrusel derecha" onclick="moverCarrusel('carrusel-LIMPIEZA', 1)">▶️</button>
+</div>
+
+<!--TERCERA SECCION CONSOLAS-->
+<div class="contenidoE">
+  <h2>Consolas</h2>
+</div>
+
+ <div class="carrusel-contenedor">
+  <button class="btn-carrusel izquierda" onclick="moverCarrusel('carrusel-CONSOLAS', -1)">◀️</button>
+
+  <div class="carrusel" id="carrusel-CONSOLAS" data-posicion="0">
+    <div class="item"><img src="imgEle/wii.jpg" alt="Producto 1" />   <p>Wii</p>
+    <div class="precio" data-precio="800.00">$800.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Wii" 
+          data-precio="800.00"
+          data-id="FL0013">
+    Agregar al carrito
+    </button>
+    </div>
+      <div class="item"><img src="imgEle/seriesX.jpg" alt="Producto 2" />   <p>Xbox Series X</p>
+      <div class="precio" data-precio="2800.00">$2800.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Xbox Series X" 
+          data-precio="2800.00"
+          data-id="FL0014">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgEle/seriesS.JPG" alt="Producto 3" />   <p>Xbox Series S</p>
+      <div class="precio" data-precio="2500.00">$2500.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Xbox Series S" 
+          data-precio="2500.00"
+          data-id="FL0015">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgEle/play4.jpg" alt="Producto 4" />    <p>Play Station 4</p>
+      <div class="precio" data-precio="1800.00">$1800.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Play Station 4" 
+          data-precio="1800.00"
+          data-id="FL0016">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgEle/ps5.jpg" alt="Producto 5" />   <p>Play Station 5</p>
+      <div class="precio" data-precio="3100.00">$3100.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Play Station 5" 
+          data-precio="3100.00"
+          data-id="FL0017">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgEle/nintendo.JPG" alt="Producto 5" />   <p>Nintendo Switch</p>
+      <div class="precio" data-precio="1600.00">$1600.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Nintendo Switch" 
+          data-precio="1600.00"
+          data-id="FL0018">
+    Agregar al carrito
+    </button>
+      </div>
+  </div>
+
+  <button class="btn-carrusel derecha" onclick="moverCarrusel('carrusel-CONSOLAS', 1)">▶️</button>
+</div>
+
+
+<!-- BARRA DE ABAJO -->
+<div class="barra-inferior">
+  <div class="total-info">
+    <button class="carrito-icono" id="btn-ver-carrito">🛒</button>
+    <span class="total-texto">$0.00</span>
+  </div>
+  <div class="btn-CCT">
+    <a href="index.html">CCT</a>
+  </div>
+  <button class="btn-qr">QR</button>
+</div>
+
+
+<!-- Modal del Carrito -->
+<div id="modal-carrito" class="modal-carrito">
+  <div class="modal-contenido">
+    <span class="cerrar-modal">&times;</span>
+    <h2>Tu Carrito de Compras</h2>
+    <div id="lista-carrito" class="lista-carrito">
+      <!-- Los productos aparecerán aquí -->
+    </div>
+    <div class="modal-total">
+      <span>Total:</span>
+      <span id="total-modal">$0.00</span>
+    </div>
+    <button id="vaciar-carrito" class="btn-vaciar">Vaciar Carrito</button>
+  </div>
+</div>
+
+<!-- Modal del QR -->
+<div id="modal-qr" class="modal-qr">
+  <div class="modal-contenido-qr">
+    <span class="cerrar-modal-qr">&times;</span>
+    <h2>Pago con QR</h2>
+    
+    <div class="qr-container">
+      <!-- Aquí se generará el QR dinámicamente -->
+      <div id="codigo-qr"></div>
+      <div class="total-qr">
+        <span>Total a pagar:</span>
+        <span id="total-qr">$0.00</span>
+      </div>
+    </div>
+    
+    <div class="botones-qr">
+      <button id="btn-aceptar-qr" class="btn-aceptar">Aceptar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de confirmación de pago -->
+<div id="modal-confirmacion" class="modal-confirmacion">
+  <div class="modal-contenido-confirmacion">
+    <h2>Confirmar método de pago</h2>
+    <p>¿Cómo deseas realizar el pago?</p>
+    
+    <div class="opciones-pago">
+      <button id="btn-presencial" class="btn-metodo">
+        <span>💵</span> Pago en tienda
+      </button>
+      <button id="btn-transferencia" class="btn-metodo">
+        <span>📱</span> Transferencia
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 4: Pago en Tienda (nuevo) -->
+<div id="modal-pago-tienda" class="modal-pago-tienda">
+  <div class="modal-contenido-pago">
+    <span class="cerrar-modal-pago">&times;</span>
+    <h2>Pago en Tienda</h2>
+    
+    <!-- QR regenerado -->
+    <div id="qr-pago-tienda"></div>
+    
+    <!-- Total -->
+    <div class="total-pago-tienda">
+      <span>Total a pagar:</span>
+      <span id="total-pago-tienda">$0.00</span>
+    </div>
+    
+    <!-- Mensaje destacado -->
+    <div class="mensaje-destacado">
+      <strong>¡Favor de escanear el QR en el establecimiento!</strong>
+    </div>
+    
+    <!-- Botón Cerrar -->
+    <button id="btn-cerrar-pago" class="btn-cerrar">Cerrar</button>
+  </div>
+</div>
+
+
+
+
+<script src="script.js"> </script>  
+<script src="carrito.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+

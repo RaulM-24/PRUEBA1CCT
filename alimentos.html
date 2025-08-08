@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>CCT</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+</head>
+<body>
+
+<!-- BARRA DE ARRIBA -->
+<div class="barra-superior">
+  <div class="nombre-tienda">CCT</div>
+
+  <div class="frases">
+    <b>
+      <span>LA MEJOR TIENDA DEL MUNDO,</span>
+      <span>COMPRA Y RECOGE FÁCIL</span>
+    </b>
+  </div>
+
+  <div class="busqueda-categorias">
+    <input type="text" placeholder="Buscar productos...">
+    <button class="lupa">🔍</button>
+    <button class="btn-categorias" onclick="toggleMenu()">≡</button>
+
+    <div id="menu-secciones" class="menu-secciones">
+      <a href="alimentos.html">Alimentos</a>
+      <a href="limpieza.html">Productos de limpieza</a>
+      <a href="hogar.html">Productos para el hogar</a>
+      <a href="libros.html">Libros</a>
+      <a href="electrodomesticos.html">Electrodomésticos</a>
+      <a href="pareja.html">Para la pareja</a>
+    </div>
+  </div>
+</div>
+
+<!-- TITULO PRINCIPAL DE LA PÁGINA -->
+<div class="contenidoNOMBRES">
+  <h1>Sección de Alimentos</h1>
+</div>
+
+<!-- PRIMER CONTENEDOR: BOTANAS -->
+<div class="contenidoE">
+  <h2>Botanas</h2>
+</div>
+
+<div class="carrusel-contenedor">
+  <!-- Contenedor tipo carrusel -->
+  <button class="btn-carrusel izquierda" onclick="moverCarrusel('carrusel-botanas', -1)">◀️</button>
+
+  <div class="carrusel" id="carrusel-botanas" data-posicion="0">
+    <div class="item"><img src="imgAlimentos/pri.jpg" alt="Producto 1" /> <p>Pringles </p>  
+    <div class="precio" data-precio="65.00">$65.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Pringles" 
+          data-precio="65.00"
+          data-id="AL001">
+    Agregar al carrito
+    </button>
+    </div>
+      <div class="item"><img src="imgAlimentos/palo.jpg" alt="Producto 2" /> <p>palomitas mantequilla </p> 
+      <div class="precio" data-precio="17.00">$17.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="palomitas mantequilla" 
+          data-precio="17.00"
+          data-id="AL002">
+    Agregar al carrito
+    </button>
+    </div>
+      <div class="item"><img src="imgAlimentos/mix.jpg" alt="Producto 3" /> <p>Mix</p> 
+       <div class="precio" data-precio="20.00">$20.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Mix" 
+          data-precio="20.00"
+          data-id="AL003">
+    Agregar al carrito
+    </button>
+    </div>
+      <div class="item"><img src="imgAlimentos/chip.jpg" alt="Producto 4" /> <p>Chips fuego </p>  
+      <div class="precio" data-precio="35.00">$35.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Chips fuego" 
+          data-precio="35.00"
+          data-id="AL004">
+    Agregar al carrito
+    </button>
+    </div>
+      <div class="item"><img src="imgAlimentos/rufles.jpg" alt="Producto 5" /> <p>Rufles queso</p>  
+       <div class="precio" data-precio="32.00">$32.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Rufles queso" 
+          data-precio="32.00"
+          data-id="AL005">
+    Agregar al carrito
+    </button>
+    </div>
+      <div class="item"><img src="imgAlimentos/cho.jpg" alt="Producto 6" /> <p>chokis </p> 
+       <div class="precio" data-precio="18.00">$18.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="chokis" 
+          data-precio="18.00"
+          data-id="AL006">
+    Agregar al carrito
+    </button>
+    </div>
+    </div>
+  
+
+  <button class="btn-carrusel derecha" onclick="moverCarrusel('carrusel-botanas', 1)">▶️</button>
+</div>
+
+
+<!-- SEGUNDO CONTENEDOR: FRUTAS Y VERDURAS -->
+<div class="contenidoE">
+  <h2>Frutas y Verduras</h2>
+</div>
+
+<div class="carrusel-contenedor">
+
+  <button class="btn-carrusel izquierda" onclick="moverCarrusel('carrusel-frutas', -1)">◀️</button>
+
+  <div class="carrusel" id="carrusel-frutas" data-posicion="0">
+    <div class="item"><img src="imgAlimentos/naranjas.jpg" alt="Producto 1" /> <p>Naranjas </p>    
+     <div class="precio" data-precio="18.00">$18.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Naranjas" 
+          data-precio="20.00"
+          data-id="AL007">
+    Agregar al carrito
+    </button>
+    </div>
+      <div class="item"><img src="imgAlimentos/bro.jpg" alt="Producto 2" /> <p>Brocoli</p>   
+      <div class="precio" data-precio="28.00">$28.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Brocoli" 
+          data-precio="28.00"
+          data-id="AL008">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgAlimentos/ma.jpg" alt="Producto 3" /> <p>Manzanas </p>   
+      <div class="precio" data-precio="20.00">$20.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Manzanas" 
+          data-precio="20.00"
+          data-id="AL009">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgAlimentos/uvas.jpg" alt="Producto 4" /> <p>Uvas</p>  
+      <div class="precio" data-precio="38.00">$38.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Uvas" 
+          data-precio="38.00"
+          data-id="AL0010">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgAlimentos/za.jpg" alt="Producto 5" />  <p>Zanahorias</p>  
+      <div class="precio" data-precio="32.00">$32.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Zanahorias" 
+          data-precio="32.00"
+          data-id="AL0011">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgAlimentos/to.jpg" alt="Producto 6" /> <p>Tomates</p>   
+      <div class="precio" data-precio="26.00">$26.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Tomates" 
+          data-precio="26.00"
+          data-id="AL0012">
+    Agregar al carrito
+    </button>
+      </div>
+    </div>  
+  
+  <button class="btn-carrusel derecha" onclick="moverCarrusel('carrusel-frutas', 1)">▶️</button>
+</div>
+
+<!--TERCERA SECCION-->
+<div class="contenidoE">
+  <h2>Carnes</h2>
+</div>
+
+ <div class="carrusel-contenedor">
+  <button class="btn-carrusel izquierda" onclick="moverCarrusel('carrusel-carnes', -1)">◀️</button>
+
+  <div class="carrusel" id="carrusel-carnes" data-posicion="0">
+    <div class="item"><img src="imgAlimentos/pollo.jpg" alt="Producto 1" /> <P>Pechuga de pollo </P>   
+    <div class="precio" data-precio="50.00">$50.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Pechuga de pollo" 
+          data-precio="50.00"
+          data-id="AL0013">
+    Agregar al carrito
+    </button>
+    </div>
+      <div class="item"><img src="imgAlimentos/nw.jpg" alt="Producto 2" /> <p>New York Strip </p>  
+      <div class="precio" data-precio="500.00">$500.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="New York Strip" 
+          data-precio="500.00"
+          data-id="AL0014">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgAlimentos/filete.jpg" alt="Producto 3" /> <p>Filete </p> 
+      <div class="precio" data-precio="70.00">$70.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Filete" 
+          data-precio="70.00"
+          data-id="AL0015">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgAlimentos/molida.jpg" alt="Producto 4" /> <P>Carne molida </P> 
+      <div class="precio" data-precio="80.00">$80.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Carne molida" 
+          data-precio="80.00"
+          data-id="AL0016">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgAlimentos/hotd.jpg" alt="Producto 5" /> <p>Winis </p>  
+      <div class="precio" data-precio="60.00">$60.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Winis" 
+          data-precio="60.00"
+          data-id="AL0017">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgAlimentos/chorizo.jpg" alt="Producto 5" /> <p>Chorizo </p> 
+      <div class="precio" data-precio="40.00">$40.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Chorizo" 
+          data-precio="40.00"
+          data-id="AL0018">
+    Agregar al carrito
+    </button>
+      </div>
+  </div>
+
+  <button class="btn-carrusel derecha" onclick="moverCarrusel('carrusel-carnes', 1)">▶️</button>
+</div>
+
+<!-- BARRA DE ABAJO -->
+<div class="barra-inferior">
+  <div class="total-info">
+    <button class="carrito-icono" id="btn-ver-carrito">🛒</button>
+    <span class="total-texto">$0.00</span>
+  </div>
+  <div class="btn-CCT">
+    <a href="index.html">CCT</a>
+  </div>
+  <button class="btn-qr">QR</button>
+</div>
+
+<!-- Modal del Carrito -->
+<div id="modal-carrito" class="modal-carrito">
+  <div class="modal-contenido">
+    <span class="cerrar-modal">&times;</span>
+    <h2>Tu Carrito de Compras</h2>
+    <div id="lista-carrito" class="lista-carrito">
+      <!-- Los productos aparecerán aquí -->
+    </div>
+    <div class="modal-total">
+      <span>Total:</span>
+      <span id="total-modal">$0.00</span>
+    </div>
+    <button id="vaciar-carrito" class="btn-vaciar">Vaciar Carrito</button>
+  </div>
+</div>
+
+<!-- Modal del QR -->
+<div id="modal-qr" class="modal-qr">
+  <div class="modal-contenido-qr">
+    <span class="cerrar-modal-qr">&times;</span>
+    <h2>Pago con QR</h2>
+    
+    <div class="qr-container">
+      <!-- Aquí se generará el QR dinámicamente -->
+      <div id="codigo-qr"></div>
+      <div class="total-qr">
+        <span>Total a pagar:</span>
+        <span id="total-qr">$0.00</span>
+      </div>
+    </div>
+    
+    <div class="botones-qr">
+      <button id="btn-aceptar-qr" class="btn-aceptar">Aceptar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de confirmación de pago -->
+<div id="modal-confirmacion" class="modal-confirmacion">
+  <div class="modal-contenido-confirmacion">
+    <h2>Confirmar método de pago</h2>
+    <p>¿Cómo deseas realizar el pago?</p>
+    
+    <div class="opciones-pago">
+      <button id="btn-presencial" class="btn-metodo">
+        <span>💵</span> Pago en tienda
+      </button>
+      <button id="btn-transferencia" class="btn-metodo">
+        <span>📱</span> Transferencia
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 4: Pago en Tienda (nuevo) -->
+<div id="modal-pago-tienda" class="modal-pago-tienda">
+  <div class="modal-contenido-pago">
+    <span class="cerrar-modal-pago">&times;</span>
+    <h2>Pago en Tienda</h2>
+    
+    <!-- QR regenerado -->
+    <div id="qr-pago-tienda"></div>
+    
+    <!-- Total -->
+    <div class="total-pago-tienda">
+      <span>Total a pagar:</span>
+      <span id="total-pago-tienda">$0.00</span>
+    </div>
+    
+    <!-- Mensaje destacado -->
+    <div class="mensaje-destacado">
+      <strong>¡Favor de escanear el QR en el establecimiento!</strong>
+    </div>
+    
+    <!-- Botón Cerrar -->
+    <button id="btn-cerrar-pago" class="btn-cerrar">Cerrar</button>
+  </div>
+</div>
+
+
+<script src="script.js"></script>
+<script src="carrito.js"></script>
+</body>
+</html>

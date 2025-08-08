@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>CCT</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+</head>
+<body>
+
+<!--BARRA DE ARRIBA-->
+<div class="barra-superior">
+  <div class="nombre-tienda">CCT</div>
+
+  <div class="frases">
+    <b><span>LA MEJOR TIENDA DEL MUNDO,</span>
+    <span>COMPRA Y RECOGE FÁCIL</span></b>
+  </div>
+
+  <div class="busqueda-categorias">
+    <input type="text" placeholder="Buscar productos...">
+    <button class="lupa">🔍</button>
+    <button class="btn-categorias" onclick="toggleMenu()">≡</button>
+
+<div id="menu-secciones" class="menu-secciones">
+    <a href="alimentos.html">Alimentos</a>
+    <a href="limpieza.html">Productos de limpieza</a>
+    <a href="hogar.html">Productos para el hogar</a>
+    <a href="libros.html">Libros</a>
+    <a href="electrodomesticos.html">Electrodomesticos</a>
+    <a href="pareja.html">Para la pareja</a>
+    </div>
+</div>
+</div>
+
+
+<!--CONTENIDO YA-->
+<div class="contenidoNOMBRES">
+  <h1> Sección de Libros</h1>
+</div>
+
+<!-- PRIMER CONTENEDOR: AMOR -->
+<div class="contenidoE">
+  <h2>Amor</h2>
+</div>
+
+
+<div class="carrusel-contenedor">
+  <!-- Contenedor tipo carrusel -->
+  <button class="btn-carrusel izquierda" onclick="moverCarrusel('carrusel-AMOR', -1)">◀️</button>
+
+  <div class="carrusel" id="carrusel-AMOR" data-posicion="0">
+    <div class="item"><img src="imgLibros/boulevart-1.jpg" alt="Producto 1"/>  <p>Boulevard Libro 1</p>
+    <div class="precio" data-precio="110">$110.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Boulevard Libro 1" 
+          data-precio="110.00"
+          data-id="CL001">
+    Agregar al carrito
+    </button>
+    </div>
+      <div class="item"><img src="imgLibros/bou.jpg" alt="Producto 2"/>  <p>Boulevard Libro 2</p>
+       <div class="precio" data-precio="125.00">$125.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Boulevard Libro 2" 
+          data-precio="125.00"
+          data-id="CL002">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgLibros/bouDibujos.jpg" alt="Producto 3"/>  <p>Boulevard Dibujos</p>
+       <div class="precio" data-precio="160.00">$160.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Boulevard Dibujos" 
+          data-precio="160.00"
+          data-id="CL003">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgLibros/dosM.jpg" alt="Producto 4"/>   <p>A Dos Metros de Ti</p>  
+       <div class="precio" data-precio="130.00">$130.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="A Dos Metros de Ti" 
+          data-precio="130.00"
+          data-id="CL004">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgLibros/estrella.jpg" alt="Producto 5"/>  <p>Bajo La Misma Estrella</p>
+       <div class="precio" data-precio="150.00">$150.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Bajo La Misma Estrella" 
+          data-precio="150.00"
+          data-id="CL005">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgLibros/VF.jpg" alt="Producto 6"/>  <p>Violet Y Finch</p>
+       <div class="precio" data-precio="160.00">$160.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Violet Y Finch" 
+          data-precio="160.00"
+          data-id="CL006">
+    Agregar al carrito
+    </button>
+      </div>
+    </div>
+  
+
+  <button class="btn-carrusel derecha" onclick="moverCarrusel('carrusel-AMOR', 1)">▶️</button>
+</div>
+
+
+<!-- SEGUNDO CONTENEDOR: MANGAS -->
+<div class="contenidoE">
+  <h2>Mangas</h2>
+</div>
+
+<div class="carrusel-contenedor">
+
+  <button class="btn-carrusel izquierda" onclick="moverCarrusel('carrusel-MANGAS', -1)">◀️</button>
+
+  <div class="carrusel" id="carrusel-MANGAS" data-posicion="0">
+    <div class="item"><img src="imgLibros/BC1.jpg" alt="Producto 1"/>  <p>Black clover Volumen 1</p>
+     <div class="precio" data-precio="90.00">$90.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Black clover Volumen 1" 
+          data-precio="90.00"
+          data-id="CL007">
+    Agregar al carrito
+    </button>
+    </div>
+      <div class="item"><img src="imgLibros/bleach1.jpg" alt="Producto 2"/>  <p>Bleach Volumen 1</p>
+       <div class="precio" data-precio="90.00">$90.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Bleach Volumen 1" 
+          data-precio="90.00"
+          data-id="CL008">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgLibros/JJ.jpg" alt="Producto 3"/>  <p>Jujutsu Kaisen Volumen 1</p>
+      <div class="precio" data-precio="90.00">$90.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="jujutsu Volumen 1" 
+          data-precio="90.00"
+          data-id="CL009">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgLibros/Kimetsu.jpg" alt="Producto 4"/>  <p>Kimetsu no Yaiba Volumen 1</p>
+      <div class="precio" data-precio="90.00">$90.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Kimetsu Volumen 1" 
+          data-precio="90.00"
+          data-id="CL0010">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgLibros/naruto.jpg" alt="Producto 5"/>    <p>Naruto Volumen 1</p>
+      <div class="precio" data-precio="90.00">$90.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Naruto Volumen 1" 
+          data-precio="90.00"
+          data-id="CL0011">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgLibros/eren.jpg" alt="Producto 6"/>   <p>Attack on titan Volumen 1</p>
+      <div class="precio" data-precio="90.00">$90.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Attack on titan Volumen 1" 
+          data-precio="90.00"
+          data-id="CL0012">
+    Agregar al carrito
+    </button>
+      </div>
+    </div>  
+  
+  <button class="btn-carrusel derecha" onclick="moverCarrusel('carrusel-MANGAS', 1)">▶️</button>
+</div>
+
+<!--TERCERA SECCION DESARROLLO PERSONAL-->
+<div class="contenidoE">
+  <h2>Desarrollo Personal</h2>
+</div>
+
+ <div class="carrusel-contenedor">
+  
+  <button class="btn-carrusel izquierda" onclick="moverCarrusel('carrusel-DESARROLLO', -1)">◀️</button>
+
+  <div class="carrusel" id="carrusel-DESARROLLO" data-posicion="0">
+    <div class="item"><img src="imgLibros/5.jpg" alt="Producto 1"/>  <p>El Club De Las 5 De La Mañana</p>
+    <div class="precio" data-precio="110.00">$110.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="El Club De Las 5 De La Mañana" 
+          data-precio="110.00"
+          data-id="CL0013">
+    Agregar al carrito
+    </button>
+    </div>
+      <div class="item"><img src="imgLibros/cama.jpg" alt="Producto 2"/> <p>Tiende Tu Cama</p>
+      <div class="precio" data-precio="100.00">$100.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Tiende Tu Cama" 
+          data-precio="100.00"
+          data-id="CL0014">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgLibros/LMDT.jpg" alt="Producto 3"/>  <p>Lo Mejor De Ti</p>
+      <div class="precio" data-precio="160.00">$160.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Lo Mejor De Ti" 
+          data-precio="160.00"
+          data-id="CL0015">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgLibros/habitos-atomicos.jpg" alt="Producto 4"/>  <p>Habitos Atomicos</p>
+      <div class="precio" data-precio="120.00">$120.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="Habitos Atomicos" 
+          data-precio="120.00"
+          data-id="CL0016">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgLibros/david.jpg" alt="Producto 5"/>  <p>No Puedes Lastimarme</p>
+      <div class="precio" data-precio="180.00">$180.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="No Puedes Lastimarme" 
+          data-precio="180.00"
+          data-id="CL0017">
+    Agregar al carrito
+    </button>
+      </div>
+      <div class="item"><img src="imgLibros/carajo.jpg" alt="Producto 6"/>   <p>El Arte De Que Te Importe Un Carajo</p>
+      <div class="precio" data-precio="100.00">$100.00</div> 
+    <button class="btn-agregar" 
+          data-nombre="El Arte De Que Te Importe Un Carajo" 
+          data-precio="100.00"
+          data-id="CL0018">
+    Agregar al carrito
+    </button>
+      </div>
+  </div>
+
+  <button class="btn-carrusel derecha" onclick="moverCarrusel('carrusel-DESARROLLO', 1)">▶️</button>
+</div>
+
+
+
+<!-- BARRA DE ABAJO -->
+<div class="barra-inferior">
+  <div class="total-info">
+    <button class="carrito-icono" id="btn-ver-carrito">🛒</button>
+    <span class="total-texto">$0.00</span>
+  </div>
+  <div class="btn-CCT">
+    <a href="index.html">CCT</a>
+  </div>
+  <button class="btn-qr">QR</button>
+</div>
+
+
+<!-- Modal del Carrito -->
+<div id="modal-carrito" class="modal-carrito">
+  <div class="modal-contenido">
+    <span class="cerrar-modal">&times;</span>
+    <h2>Tu Carrito de Compras</h2>
+    <div id="lista-carrito" class="lista-carrito">
+      <!-- Los productos aparecerán aquí -->
+    </div>
+    <div class="modal-total">
+      <span>Total:</span>
+      <span id="total-modal">$0.00</span>
+    </div>
+    <button id="vaciar-carrito" class="btn-vaciar">Vaciar Carrito</button>
+  </div>
+</div>
+
+<!-- Modal del QR -->
+<div id="modal-qr" class="modal-qr">
+  <div class="modal-contenido-qr">
+    <span class="cerrar-modal-qr">&times;</span>
+    <h2>Pago con QR</h2>
+    
+    <div class="qr-container">
+      <!-- Aquí se generará el QR dinámicamente -->
+      <div id="codigo-qr"></div>
+      <div class="total-qr">
+        <span>Total a pagar:</span>
+        <span id="total-qr">$0.00</span>
+      </div>
+    </div>
+    
+    <div class="botones-qr">
+      <button id="btn-aceptar-qr" class="btn-aceptar">Aceptar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de confirmación de pago -->
+<div id="modal-confirmacion" class="modal-confirmacion">
+  <div class="modal-contenido-confirmacion">
+    <h2>Confirmar método de pago</h2>
+    <p>¿Cómo deseas realizar el pago?</p>
+    
+    <div class="opciones-pago">
+      <button id="btn-presencial" class="btn-metodo">
+        <span>💵</span> Pago en tienda
+      </button>
+      <button id="btn-transferencia" class="btn-metodo">
+        <span>📱</span> Transferencia
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 4: Pago en Tienda (nuevo) -->
+<div id="modal-pago-tienda" class="modal-pago-tienda">
+  <div class="modal-contenido-pago">
+    <span class="cerrar-modal-pago">&times;</span>
+    <h2>Pago en Tienda</h2>
+    
+    <!-- QR regenerado -->
+    <div id="qr-pago-tienda"></div>
+    
+    <!-- Total -->
+    <div class="total-pago-tienda">
+      <span>Total a pagar:</span>
+      <span id="total-pago-tienda">$0.00</span>
+    </div>
+    
+    <!-- Mensaje destacado -->
+    <div class="mensaje-destacado">
+      <strong>¡Favor de escanear el QR en el establecimiento!</strong>
+    </div>
+    
+    <!-- Botón Cerrar -->
+    <button id="btn-cerrar-pago" class="btn-cerrar">Cerrar</button>
+  </div>
+</div>
+
+
+
+<script src="script.js"> </script>  
+<script src="carrito.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
